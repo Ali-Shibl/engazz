@@ -1,0 +1,26 @@
+    /* start */
+    .add-worker-card {
+  border-radius: 20px;
+  background: linear-gradient(145deg, #ffffff, #e6f0ff);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.add-worker-card h2 {
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+.add-worker-card .form-control,
+.add-worker-card .form-select {
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.add-worker-card .form-control:focus,
+.add-worker-card .form-select:focus {
+  border-color: var(--main-color);
+  box-shadow: 0 0 8px rgba(13, 110, 253, 0.3);
+}
+

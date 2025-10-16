@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>لوحة التحكم</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="styles/style.css" rel="stylesheet">
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+  <button class="toggle-btn" id="toggleSidebar">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div class="overlay" id="overlay"></div>
+
+  <div class="sidebar" id="sidebar">
+      <div class="text-center mb-3 logo">
+    <img src="images/logo.png" alt="Logo" >
+  </div>
+
+<a href="#" class="active" data-page="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+<a href="#" data-page="add-worker.html"><i class="fas fa-user-plus"></i><span>Add Worker</span></a>
+<a href="#" data-page="workers.html"><i class="fas fa-users"></i><span>All Workers</span></a>
+<a href="#" data-page="Financialaccounts.html"><i class="fas fa-wallet"></i><span>Financial Accounts</span></a>
+<a href="#" data-page="orders.html"><i class="fas fa-box"></i><span>Orders</span></a>
+<a href="#" data-page="profile.html"><i class="fas fa-user"></i><span>Profile</span></a>
+<a href="#" id="logoutBtn" class="text-danger">
+  <i class="fas fa-sign-out-alt "></i> <span>Logout</span>
+</a>
+
+
+  </div>
+
+  <!-- المحتوى يتغير هنا -->
+  <div class="content mt-lg-2 mt-5" id="content">
+    <div class="text-center text-muted mt-5">جاري التحميل...</div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="layout.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> login</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+  <!-- أيقونات -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- تنسيق إضافي -->
+  <link href="styles/login.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="login-card">
+  <h3><i class="fa-solid fa-user-lock  mx-2"></i>Login</h3>
+
+  <form id="loginForm">
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input type="text" class="form-control" id="username" placeholder="Enter your username" >
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" placeholder="Enter your password" >
+    </div>
+
+    <button type="submit" class="btn-main w-100 mt-3">Login</button>
+        <button type="button" class="btn-out-main w-100 mt-2" id="registerBtn">Register</button>
+
+  </form>
+
+  <p class="text-muted mt-3">Forgot your password? <a href="#">Click here</a></p>
+</div>
+
+
+  <!-- SweetAlert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="index.js"></script>
+
+</body>
+</html>

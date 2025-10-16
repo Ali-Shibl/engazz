@@ -1,0 +1,198 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+    :root{
+      --main-color:rgba(82, 69, 157, 1);
+
+    }
+    body {
+      background-color: #f8f9fa;
+      font-family: "Tajawal", sans-serif;
+    }
+
+    /* ===== Sidebar ===== */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 250px;
+      background-color: var(--main-color);
+      color: #fff;
+      transition: all 0.3s ease;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      padding-top: 60px;
+    }
+
+
+    /* لما يتقفل على الكمبيوتر */
+    .sidebar.closed {
+      width: 80px;
+    }
+
+/* حالة الـ sidebar مفتوح */
+.sidebar .logo img {
+  width: 100px;       /* عرض الصورة */
+  height: auto;       /* ارتفاع تلقائي للحفاظ على نسبة الصورة */
+  transition: all 0.3s ease; /* تأثير سلس عند التغيير */
+  opacity: 1;         /* الصورة مرئية */
+}
+
+/* حالة الـ sidebar مغلق */
+.sidebar.closed .logo img {
+  width: 0;           /* يمكنك تصغير الحجم */
+  opacity: 0;         /* أو جعلها شفافة */
+}
+
+
+
+    .sidebar a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* لما يتقفل على الكمبيوتر فقط */
+    @media (min-width: 769px) {
+      .sidebar.closed a span {
+        opacity: 0;
+        width: 0;
+      }
+    }
+
+    .sidebar i {
+      min-width: 25px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    /* ===== المحتوى ===== */
+    .content {
+      margin-left: 250px;
+      padding: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .content.expanded {
+      margin-left: 80px;
+    }
+
+    /* ===== زر الفتح والإغلاق ===== */
+    .toggle-btn {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      z-index: 1001;
+      background-color: var(--main-color);
+      color: white;
+      border: none;
+      padding: 10px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .toggle-btn:hover {
+      background-color: #dfdfdf;
+    }
+    .toggle-btn:hover i{
+      color: var(--main-color)
+    }
+
+    /* ===== للموبايل ===== */
+    @media (max-width: 768px) {
+      .sidebar {
+        left: -250px;
+        width: 250px;
+      }
+
+      .sidebar.open {
+        left: 0;
+      }
+
+      .content {
+        margin-left: 0;
+      }
+
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 900;
+      }
+
+      .overlay.show {
+        display: block;
+      }
+    }
+
+    /* start */
+    /* ✅ تخصيص شكل شريط التمرير (scrollbar) */
+::-webkit-scrollbar {
+  width: 8px;                /* عرض الشريط العمودي */
+  height: 8px;               /* ارتفاع الشريط الأفقي */
+}
+
+/* خلفية المسار */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* شريط التمرير نفسه */
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);        /* نفس لون text-main */
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+/* عند تمرير الماوس عليه */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-color);        /* أغمق شوي */
+}
+
+
+
+
+    .btn-main{
+      background-color: var(--main-color);
+      color: white;
+      border: none;
+      padding: 10px 5px;
+      border-radius: 25px;
+      outline: none;
+    }
+    .btn-out-main{
+      background-color: rgb(255, 255, 255);
+      color: var(--main-color);
+      border: var(--main-color) solid 1px;
+      padding: 10px 5px;
+      border-radius: 25px;
+      outline: none;
+    }
+    .text-main{
+     color: var(--main-color);
+    }
