@@ -1,10 +1,10 @@
 <!-- ✅ قسم الإحصائيات -->
-<div class="container py-5">
+<div class="container mt-2">
   <h2 class="text-main text-center fw-bold mb-4">Statistics</h2>
 
   <!-- 🔹 البطاقات السريعة -->
   <div class="row text-center g-4 mb-5">
-    <div class="col-md-3 col-6">
+    <div class="col-md-6 col-xl-3">
       <div class="p-4 bg-white shadow-sm rounded-3">
         <i class="bi bi-people fs-1 text-main mb-2"></i>
         <h3 class="fw-bold">250+</h3>
@@ -12,7 +12,7 @@
       </div>
     </div>
 
-    <div class="col-md-3 col-6">
+    <div class="col-md-6 col-xl-3">
       <div class="p-4 bg-white shadow-sm rounded-3">
         <i class="bi bi-person-badge fs-1 text-main mb-2"></i>
         <h3 class="fw-bold">1200+</h3>
@@ -20,7 +20,7 @@
       </div>
     </div>
 
-    <div class="col-md-3 col-6">
+    <div class="col-md-6 col-xl-3">
       <div class="p-4 bg-white shadow-sm rounded-3">
         <i class="bi bi-journal-check fs-1 text-main mb-2"></i>
         <h3 class="fw-bold">450+</h3>
@@ -28,7 +28,7 @@
       </div>
     </div>
 
-    <div class="col-md-3 col-6">
+    <div class="col-md-6 col-xl-3">
       <div class="p-4 bg-white shadow-sm rounded-3">
         <i class="bi bi-hand-thumbs-up fs-1 text-main mb-2"></i>
         <h3 class="fw-bold">98%</h3>
@@ -38,8 +38,41 @@
   </div>
 
   <!-- 🔹 الرسم البياني -->
-  <div class="card shadow-sm p-4">
-    <h5 class="text-center mb-4 fw-bold text-main">Overall Statistics Overview</h5>
-    <canvas id="statsChart" height="120"></canvas>
+  <h2 class="text-main text-center fw-bold my-4">Statistics Dashboard</h2>
+
+  <div class="row g-4">
+    <!-- 📊 Bar Chart -->
+    <div class="col-lg-6 ">
+      <div class="card shadow-sm p-4">
+        <h5 class="text-center mb-3 fw-bold text-main">Monthly Training Requests</h5>
+        <canvas id="barChart" height="120"></canvas>
+      </div>
+    </div>
+
+    <!-- 📈 Line Chart -->
+    <div class="col-lg-6 ">
+      <div class="card shadow-sm p-4">
+        <h5 class="text-center mb-3 fw-bold text-main">User Growth Over Time</h5>
+        <canvas id="lineChart" height="120"></canvas>
+      </div>
+    </div>
+
+    <!-- 🍩 Doughnut Chart -->
+    <div class="col-lg-6 ">
+      <div class="card shadow-sm p-4">
+        <h5 class="text-center mb-3 fw-bold text-main">Requests by Category</h5>
+        <canvas id="doughnutChart" height="120"></canvas>
+      </div>
+    </div>
+
+    <!-- 🥧 Pie Chart -->
+    <div class="col-lg-6 ">
+      <div class="card shadow-sm p-4">
+        <h5 class="text-center mb-3 fw-bold text-main">Completion Rate</h5>
+        <canvas id="pieChart" height="120"></canvas>
+      </div>
+    </div>
   </div>
+
+
 </div>

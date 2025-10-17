@@ -1,0 +1,42 @@
+/* 🔷 غلاف التقويم */
+  .calendar-wrapper {
+    min-height: 85vh; /* يغطي أغلب الشاشة */
+  }
+
+  /* 🔹 شكل شريط الأدوات (العنوان والأزرار) */
+  .fc-toolbar-title {
+    color: var(--main-color, #007bff);
+    font-weight: 700;
+    font-size: 1.5rem !important;
+  }
+
+  .fc .fc-button {
+    background: var(--main-color, #007bff);
+    border: none;
+    color: #fff;
+    border-radius: 6px;
+    transition: 0.3s;
+  }
+
+  .fc .fc-button:hover {
+    background: #0056b3;
+  }
+
+  /* 🔸 الأرقام داخل الأيام */
+  .fc .fc-daygrid-day-number {
+    font-weight: 600;
+    color: #333;
+  }
+
+  /* 🔸 اليوم الحالي */
+  .fc .fc-day-today {
+    background: rgba(0, 123, 255, 0.1) !important;
+  }
+
+  /* 🔸 الأحداث داخل الأيام */
+  .fc-event {
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    padding: 2px 4px;
+  }
